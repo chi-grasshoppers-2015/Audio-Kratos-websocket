@@ -1,0 +1,27 @@
+{
+  "name": "music-streaming-websocket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chi-grasshoppers-2015/music-streaming-websocket.git"
+  },
+  "keywords": [
+    "music",
+    "websocket"
+  ],
+  "author": "ksliu25",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chi-grasshoppers-2015/music-streaming-websocket/issues"
+  },
+  "homepage": "https://github.com/chi-grasshoppers-2015/music-streaming-websocket#readme",
+  "dependencies": {
+    "express": "^4.13.3",
+    "socket.io": "^1.3.6"
+  }
+}
