@@ -1,13 +1,14 @@
 var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
+var port = process.env.PORT || 3030;
 
 // app.get('/', function(req, res){
 //   res.send('Hello world');
 // });
 var users = []
-http.listen(3030, function(){
-  console.log('listening on *:3030');
+http.listen(port, function(){
+  console.log('listening on *:' + port);
 });
 
 io.on('connection', function(socket){
