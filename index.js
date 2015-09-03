@@ -21,9 +21,12 @@ io.on('connection', function(socket){
     console.log("guest")
     io.emit('guestUpdatePlaylist', id)
   })
+
+  socket.on('tellAllToUpdate', function(id){
+    console.log("guest")
+    io.emit('updateSelf', id)
+  })
   
-
-
   // socket.on('chat message', function(msg){
   //   io.emit('chat message', msg);
   //   //## only returns first line, makes sense
@@ -35,9 +38,6 @@ io.on('connection', function(socket){
   // 	console.log(msg)
   // 	io.emit('ajaxreturn', "Ajax Returned")
   // })
-
-
-
 
 
   socket.on('disconnect', function(){
