@@ -3,10 +3,6 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var port = process.env.PORT || 3030;
 
-// app.get('/', function(req, res){
-//   res.send('Hello world');
-// });
-
 var users = []
 http.listen(port, function(){
   console.log('listening on *:' + port);
@@ -27,19 +23,6 @@ io.on('connection', function(socket){
     io.emit('updateSelf', id)
   })
   
-  // socket.on('chat message', function(msg){
-  //   io.emit('chat message', msg);
-  //   //## only returns first line, makes sense
-  //   // console.log('message: ' + msg);
-  //   // console.log("no emit?")
-  // });
-
-  // socket.on('ajaxsend', function(msg){
-  // 	console.log(msg)
-  // 	io.emit('ajaxreturn', "Ajax Returned")
-  // })
-
-
   socket.on('disconnect', function(){
     console.log('user disconnected');
     users.pop()
